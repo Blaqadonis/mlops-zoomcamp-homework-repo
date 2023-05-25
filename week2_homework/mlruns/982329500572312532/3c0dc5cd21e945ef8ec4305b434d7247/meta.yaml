@@ -1,0 +1,15 @@
+artifact_uri: mlflow-artifacts:/982329500572312532/3c0dc5cd21e945ef8ec4305b434d7247/artifacts
+end_time: 1684988170127
+entry_point_name: ''
+experiment_id: '982329500572312532'
+lifecycle_stage: active
+run_id: 3c0dc5cd21e945ef8ec4305b434d7247
+run_name: burly-midge-872
+run_uuid: 3c0dc5cd21e945ef8ec4305b434d7247
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1684988153670
+status: 3
+tags: []
+user_id: Odiaka
