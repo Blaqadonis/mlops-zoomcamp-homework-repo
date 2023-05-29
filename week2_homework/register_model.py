@@ -29,7 +29,12 @@ def train_and_log_model(data_path, params):
 
     with mlflow.start_run():
         for param in RF_PARAMS:
-            params[param] = int(params[param])
+            value = params.get(param, None)
+            if value is not None:
+                params[param] = int(value)
+    #with mlflow.start_run():
+       # for param in RF_PARAMS:
+          #  params[param] = int(params.get(param, None))           #int(params[param])
 
         rf = RandomForestRegressor(**params)
         rf.fit(X_train, y_train)
