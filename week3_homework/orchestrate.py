@@ -134,12 +134,13 @@ email = "chinonsoodiaka@gmail.com"
 password = "****************"  #my google app password 
 
 
-
-credentials = EmailServerCredentials(
+@flow
+def authenticate(email: str):
+    credentials = EmailServerCredentials(
     username=email,
     password=password,  
-)
-credentials.save(block, overwrite=True)
+        )
+    credentials.save(block, overwrite=True)
 
 
 @flow
@@ -175,6 +176,7 @@ def main_flow(
 
     # Train
     train_best_model(X_train, X_val, y_train, y_val, dv)
+    authenticate(email)
     send_update(email)
 
 
