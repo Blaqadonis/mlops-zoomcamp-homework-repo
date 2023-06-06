@@ -1,0 +1,5 @@
+deployments:
+- name: mlops_zoomcamp_homework3
+  entrypoint: orchestrate.py:main_flow
+  work_pool: 
+    name: zoompool
